@@ -8,6 +8,7 @@
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "start": "node server.js",
     "postinstall": "webpack -p",
+    "styles": "lessc --source-map-map-inline style/style.less style/style.css",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
@@ -36,6 +37,7 @@
     "babel-preset-stage-1": "^6.1.18",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "less": "^2.7.1",
     "lodash": "^4.17.2",
     "nodemailer": "^2.6.4",
     "react": "^15.4.1",
