@@ -4,7 +4,6 @@ import Navigation from './navigation/Navigation';
 import Header from './header/Header';
 import About from './about/About';
 import Upcoming from '../containers/upcoming/Upcoming';
-import Contact from './contact/Contact';
 import Services from './services/Services';
 import Photos from './photos/Photos';
 
@@ -14,7 +13,7 @@ class App extends Component {
         this.state = {
             navOpen: false,
             navButton: 'fa fa-bars fa-2x',
-            arrOfElements: ["renderTarget", "upcoming", "services", "about", "photos", "contact"]
+            arrOfElements: ["renderTarget", "upcoming", "services", "about", "photos"]
         };
 
         this.pageClick = this.pageClick.bind(this);
@@ -113,7 +112,6 @@ class App extends Component {
             <Services />
             <About />
             <Photos />
-            <Contact />
         </div>;
     }
 }
