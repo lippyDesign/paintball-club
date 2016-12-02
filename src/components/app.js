@@ -6,6 +6,9 @@ import About from './about/About';
 import Upcoming from '../containers/upcoming/Upcoming';
 import Services from './services/Services';
 import Photos from './photos/Photos';
+import Contact from './contact/Contact';
+import Map from './contact/Map';
+import Places from './contact/Places';
 
 class App extends Component {
     constructor() {
@@ -112,6 +115,10 @@ class App extends Component {
             <Services />
             <About />
             <Photos />
+            <div style={{ width: 600, height: 600, background: 'red'}}>
+                <Map center={{ lat: 62.20565, lng: 34.26138 }} markers={[{ location: { lat: 62.20565, lng: 34.26138 } }]} />
+            </div>
+            <Contact />
         </div>;
     }
 }
