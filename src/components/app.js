@@ -9,6 +9,8 @@ import Photos from './photos/Photos';
 import Contact from './contact/Contact';
 import Map from './contact/Map';
 import Places from './contact/Places';
+import InterestForm from '../containers/interestForm/InterestForm';
+import Footer from './footer/Footer';
 
 class App extends Component {
     constructor() {
@@ -16,7 +18,7 @@ class App extends Component {
         this.state = {
             navOpen: false,
             navButton: 'fa fa-bars fa-2x',
-            arrOfElements: ["renderTarget", "upcoming", "services", "about", "photos"]
+            arrOfElements: ["renderTarget", "upcoming", "services", "about", "photos", "contact"]
         };
 
         this.pageClick = this.pageClick.bind(this);
@@ -115,10 +117,16 @@ class App extends Component {
             <Services />
             <About />
             <Photos />
-            <div style={{ width: 600, height: 600, background: 'red'}}>
-                <Map center={{ lat: 62.20565, lng: 34.26138 }} markers={[{ location: { lat: 62.20565, lng: 34.26138 } }]} />
+            <h2 className="contactH2">СВЯЖИТЕСЬ С НАМИ</h2>
+            <div className="contactWrapper">
+                <Contact />
+                <InterestForm />
             </div>
-            <Contact />
+            <h2 className="locationH2">{'Место Нахождения'.toUpperCase()}</h2>
+            <div className="container" style={{ width: "100%", height: 600, marginBottom: 50}}>
+                <Map center={{ lat: 62.196278, lng: 34.289259 }} markers={[{ location: { lat: 62.196278, lng: 34.289259 } }]} />
+            </div>
+            <Footer/>
         </div>;
     }
 }

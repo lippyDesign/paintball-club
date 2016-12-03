@@ -13,24 +13,18 @@
 @default-font-family: "Open Sans", sans-serif;
 @thin-font: 100;
 
-.body {
-    background-color: lighten(@gray-teal-color, 20%);
+.contactWrapper {
+    border: 1px solid red;
+    .custom-flex();
+}
 
-    .app {
-        text-align: center;
+.contactH2, .locationH2 {
+    .custom-font(50px, 200, black);
+    padding: 50px 10px;
+    text-align: center;
 
-        h1 {
-            padding: 50px 0 0 0;
-            .custom-font(50px, 100, @blue-color);
-        }
-        h2 {
-            padding: 0 0 50px 0;
-            .custom-font(30px, 100, darken(@blue-color, 5%));
-        }
-        section {
-            border-top: 1px solid @teal-color;
-            padding: 35px 0;
-        }
+    @media(max-width: 843px) {
+        font-size: 35px;
     }
 }
 
@@ -45,5 +39,7 @@ img {
 @import "../src/components/services/services";
 @import "../src/components/photos/photos";
 @import "../src/components/contact/contact";
+@import "../src/components/about/about";
+@import "../src/components/footer/footer";
 @import "../src/containers/upcoming/upcoming";
 @import "../src/containers/interestForm/interest-form";

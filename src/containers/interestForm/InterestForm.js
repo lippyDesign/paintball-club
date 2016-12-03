@@ -30,12 +30,18 @@ export default class InterestForm extends Component {
     }
 
     render() {
-        return <form onSubmit={this.sendEmail.bind(this)}>
+        return <form onSubmit={this.sendEmail.bind(this)} className="interestForm">
+            <label>Имя и Фамилия</label>
             <input type="text"  ref="name" placeholder="Имя и Фамилия" />
+            <label>Номер Tелефона</label>
             <input type="tel"  ref="phone" placeholder="Номер Tелефона" />
+            <label>Адрес Электронной Почты</label>
             <input type="email"  ref="email" placeholder="Адрес Электронной Почты"/>
+            <label>Дата Мероприятия</label>
             <input type="date"  ref="date" placeholder="Дата Мероприятия"/>
+            <label>Количество Игроков</label>
             <input type="num"  ref="numPlayers" placeholder="Количество Игроков"/>
+            <label>Комментарии</label>
             <textarea ref="comments" placeholder="Комментарии"></textarea>
             <button><i className="fa fa-envelope"></i> Отправить</button>
         </form>
