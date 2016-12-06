@@ -1,8 +1,40 @@
 .upcoming {
     text-align: center;
+    background: @blue-color;
+    color: white;
+    padding: 50px 0px 70px 0px;
+    margin: 0;
 
     h2 {
-        padding: 40px 15px;
-        .custom-font(50px, 200, black);
+        padding: 0px 15px 50px 0px;
+        margin: 0;
+        .custom-font(50px, 200, white);
+    }
+    h4 {
+        color: darken(#ff675f, 2%);
+    }
+
+    .eventWrapper {
+        .custom-flex();
+
+        .eventImageWrapper {
+            width: 65%;
+
+            @media(max-width: 1194px) {
+                width: 100%;
+                .custom-flex();
+            }
+        }
+        .eventTextWrapper {
+            width: 25%;
+
+            @media(max-width: 1194px) {
+                padding-top: 30px;
+                width: 60%;
+            }
+            @media(max-width: 750px) {
+                width: 100%;
+            }
+        }
     }
 }

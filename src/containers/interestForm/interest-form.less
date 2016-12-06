@@ -1,12 +1,7 @@
 .interestForm {
-    width: 55%;
+    width: 100%;
     .custom-flex();
     flex-direction: column;
-    border: 1px solid blue;
-
-    @media(max-width: 850px) {
-        width: 100%;
-    }
 
     input, textarea {
         width: 80%;
@@ -14,5 +9,20 @@
         border-bottom: 1px solid black;
         border-radius: none;
         margin-bottom: 15px;
+        background: transparent;
+
+        outline:none;
+    }
+
+    button {
+        background: transparent;
+        border: 1px solid black;
+        border-radius: 2px;
+
+        outline:none;
+
+        &:active {
+            background: @dark-color;
+        }
     }
 }

@@ -1,6 +1,6 @@
 header {
     height: 800px;
-    background-image: url("../images/header-sunset.jpg");
+    background-image: url("../images/cover.jpg");
     background-size: cover;
     color: @very-light-gray-color;
     text-align: center;
@@ -27,11 +27,15 @@ header {
         background-position-x: -250px;
     }
 
+    a {
+        color: darken(#ff675f, 2%);
+    }
+
     h1 {
         font-size: 95px;
         font-weight: 400;
         padding: 0px 15px;
-        text-shadow: -3px 0 darkred, 0 3px darkred, 3px 0 darkred, 0 -3px darkred;
+        //text-shadow: -3px 0 darkred, 0 3px darkred, 3px 0 darkred, 0 -3px darkred;
 
         @media(max-width: 688px) {
             font-size: 65px;
