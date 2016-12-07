@@ -14,8 +14,23 @@
 @thin-font: 100;
 
 .contactWrapper {
-    border: 1px solid red;
     .custom-flex();
+    padding-bottom: 50px;
+
+    .intFormWrapper {
+        width: 65%;
+
+        @media(max-width: 800px) {
+            width: 100%;
+        }
+    }
+    .contactInfo {
+        width: 25%;
+
+        @media(max-width: 800px) {
+            width: 100%;
+        }
+    }
 }
 
 .contactH2, .locationH2 {
@@ -25,6 +40,15 @@
 
     @media(max-width: 843px) {
         font-size: 35px;
+    }
+}
+
+.mapWrapper {
+    background-color: @blue-color;
+    padding-bottom: 50px;
+
+    h2 {
+        color: white;
     }
 }
 

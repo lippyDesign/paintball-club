@@ -119,12 +119,18 @@ class App extends Component {
             <Photos />
             <h2 className="contactH2">СВЯЖИТЕСЬ С НАМИ</h2>
             <div className="contactWrapper">
-                <Contact />
-                <InterestForm />
+                <div className="contactInfo">
+                    <Contact />
+                </div>
+                <div className="intFormWrapper">
+                    <InterestForm />
+                </div>
             </div>
-            <h2 className="locationH2">{'Место Нахождения'.toUpperCase()}</h2>
-            <div className="container" style={{ width: "100%", height: 600, marginBottom: 50}}>
-                <Map center={{ lat: 62.196278, lng: 34.289259 }} markers={[{ location: { lat: 62.196278, lng: 34.289259 } }]} />
+            <div className="mapWrapper">
+                <h2 className="locationH2">{'Место Нахождения'.toUpperCase()}</h2>
+                <div className="container" style={{ width: "100%", height: 600}}>
+                    <Map center={{ lat: 62.196278, lng: 34.289259 }} markers={[{ location: { lat: 62.196278, lng: 34.289259 } }]} />
+                </div>
             </div>
             <Footer/>
         </div>;

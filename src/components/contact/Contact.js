@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Contact extends Component {
     render() {
         return <div id="contact">
-                <h3>Запись на игру по тел</h3>
+                <h3>Телефон</h3>
                 <p>
                     <a href="tel:+79602177746">
                         <i className="fa fa-phone" aria-hidden="true"></i> +7 (960) 21 777 46
